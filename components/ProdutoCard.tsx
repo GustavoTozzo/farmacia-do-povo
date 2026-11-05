@@ -24,8 +24,8 @@ export function ProdutoCard({ produto }: { produto: Produto }) {
     : null;
 
   return (
-    <div className="flex flex-col rounded-2xl border border-border bg-paper p-4 shadow-sm transition-shadow hover:shadow-md">
-      <div className="relative flex h-28 items-center justify-center rounded-xl bg-muted">
+    <div className="flex flex-col border border-border bg-paper p-4 transition-shadow hover:shadow-[4px_4px_0_var(--color-ink)]">
+      <div className="relative flex h-28 items-center justify-center bg-muted">
         {produto.selo && (
           <span
             className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[11px] font-semibold ${seloClass[produto.selo]}`}

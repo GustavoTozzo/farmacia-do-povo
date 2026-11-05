@@ -20,10 +20,6 @@ export const site = {
     mapsEmbedSrc:
       "https://maps.google.com/maps?q=Farm%C3%A1cia%20do%20Povo%2C%20Av.%20Quatorze%20de%20Dezembro%2C%20754%2C%20Nova%20Esperan%C3%A7a%2C%20PR&z=16&output=embed",
   },
-  avaliacaoGoogle: {
-    nota: 4.7,
-    quantidade: 12,
-  },
   horarios: [
     { dia: "Segunda a sexta", horario: "08:00 – 18:30" },
     { dia: "Sábado", horario: "08:00 – 12:30" },

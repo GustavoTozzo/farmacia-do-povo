@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { SkewButton } from "@/components/SkewButton";
 import { site } from "@/lib/site";
 
 const links = [
@@ -56,14 +57,9 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <a
-            href={site.whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark"
-          >
+          <SkewButton href={site.whatsapp} external>
             Fale no WhatsApp
-          </a>
+          </SkewButton>
         </div>
 
         <button
@@ -93,7 +89,7 @@ export function Header() {
               href={site.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="mt-2 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-white"
+              className="tag-cut mt-2 bg-primary px-5 py-2.5 text-center text-sm font-bold text-white"
             >
               Fale no WhatsApp
             </a>
