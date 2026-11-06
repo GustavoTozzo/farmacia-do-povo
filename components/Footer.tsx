@@ -1,19 +1,16 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { BrandLockup } from "@/components/BrandLockup";
 import { InstagramIcon } from "@/components/InstagramIcon";
-import { Logo } from "@/components/Logo";
 import { site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer id="contato" className="bg-ink text-white">
+    <footer id="contato" className="bg-primary-dark text-white">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <Logo className="h-10 w-10" />
-              <span className="font-display text-lg font-bold">Farmácia do Povo</span>
-            </div>
+            <BrandLockup className="border-white bg-primary" />
             <p className="mt-4 max-w-xs text-sm text-white/70">
               {site.descricaoCurta}
             </p>

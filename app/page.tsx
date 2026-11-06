@@ -14,8 +14,8 @@ import {
   Users,
 } from "lucide-react";
 import { BrandPanel } from "@/components/BrandPanel";
+import { Button } from "@/components/Button";
 import { ProdutoCard } from "@/components/ProdutoCard";
-import { SkewButton } from "@/components/SkewButton";
 import { site } from "@/lib/site";
 import { produtos } from "@/lib/produtos";
 
@@ -67,8 +67,8 @@ export default function Home() {
       <section className="overflow-hidden bg-muted">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">
           <div>
-            <span className="tag-cut inline-block bg-ink px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
-              Farmácia de bairro em Nova Esperança, PR
+            <span className="inline-block rounded-[4px] bg-ink px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
+              Farmácia do Povo em Nova Esperança, PR
             </span>
             <h1 className="font-display mt-5 text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl">
               Desde {site.desde} cuidando da saúde da nossa gente
@@ -79,11 +79,11 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <SkewButton href="/produtos">Ver catálogo de produtos</SkewButton>
-              <SkewButton href={site.endereco.mapsHref} variant="outline" external>
+              <Button href="/produtos">Ver catálogo de produtos</Button>
+              <Button href={site.endereco.mapsHref} variant="outline" external>
                 <Navigation className="h-4 w-4" />
                 Como chegar
-              </SkewButton>
+              </Button>
             </div>
 
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-ink-soft">
@@ -146,31 +146,28 @@ export default function Home() {
       </section>
 
       {/* Atendimentos */}
-      <section id="atendimentos" className="bg-ink py-16">
+      <section id="atendimentos" className="bg-muted py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
               Atendimentos
             </p>
-            <h2 className="font-display mt-2 text-3xl font-bold text-white">
+            <h2 className="font-display mt-2 text-3xl font-bold text-ink">
               Muito mais do que uma farmácia
             </h2>
           </div>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {atendimentos.map((item, i) => (
+            {atendimentos.map((item) => (
               <div
                 key={item.titulo}
-                className="relative border-l-4 border-accent bg-white/[0.04] p-6"
+                className="border-l-4 border-primary bg-paper p-6"
               >
-                <span className="font-display absolute right-4 top-3 text-3xl font-extrabold text-white/10">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <item.icone className="h-6 w-6 text-accent" strokeWidth={1.75} />
-                <h3 className="font-display mt-4 text-base font-semibold text-white">
+                <item.icone className="h-6 w-6 text-primary" strokeWidth={1.75} />
+                <h3 className="font-display mt-4 text-base font-semibold text-ink">
                   {item.titulo}
                 </h3>
-                <p className="mt-1.5 text-sm text-white/65">{item.texto}</p>
+                <p className="mt-1.5 text-sm text-ink-soft">{item.texto}</p>
               </div>
             ))}
           </div>
@@ -252,10 +249,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <SkewButton href={site.endereco.mapsHref} external className="mt-2 self-start">
+              <Button href={site.endereco.mapsHref} external className="mt-2 self-start">
                 <Navigation className="h-4 w-4" />
                 Abrir no Google Maps
-              </SkewButton>
+              </Button>
             </div>
 
             <div className="overflow-hidden border border-border bg-paper">
@@ -282,9 +279,9 @@ export default function Home() {
               Atendimento rápido pelo WhatsApp ou telefone, todos os dias úteis.
             </p>
           </div>
-          <SkewButton href={site.whatsapp} variant="light" external className="shrink-0">
+          <Button href={site.whatsapp} variant="light" external className="shrink-0">
             Fale no WhatsApp
-          </SkewButton>
+          </Button>
         </div>
       </section>
     </>

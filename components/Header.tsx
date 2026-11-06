@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
-import { Logo } from "@/components/Logo";
-import { SkewButton } from "@/components/SkewButton";
+import { BrandLockup } from "@/components/BrandLockup";
+import { Button } from "@/components/Button";
 import { site } from "@/lib/site";
 
 const links = [
@@ -36,12 +36,8 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-3">
-          <Logo className="h-10 w-10 sm:h-11 sm:w-11" />
-          <span className="font-display text-lg font-bold leading-tight text-ink sm:text-xl">
-            Farmácia
-            <br className="sm:hidden" /> do Povo
-          </span>
+        <Link href="/">
+          <BrandLockup />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -57,9 +53,9 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <SkewButton href={site.whatsapp} external>
+          <Button href={site.whatsapp} external>
             Fale no WhatsApp
-          </SkewButton>
+          </Button>
         </div>
 
         <button
@@ -89,7 +85,7 @@ export function Header() {
               href={site.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="tag-cut mt-2 bg-primary px-5 py-2.5 text-center text-sm font-bold text-white"
+              className="mt-2 rounded-[4px] bg-primary px-5 py-2.5 text-center text-sm font-bold text-white"
             >
               Fale no WhatsApp
             </a>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ProdutosPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <div className="rounded-2xl bg-primary-light px-5 py-4 text-sm text-primary-dark">
+      <div className="rounded-[4px] bg-primary-light px-5 py-4 text-sm text-primary-dark">
         Catálogo ilustrativo para apresentação interna — produtos, preços e
         fotos são exemplos e serão substituídos pelo estoque real da farmácia.
       </div>

@@ -44,15 +44,3 @@ body {
 .font-display {
   font-family: var(--font-baloo), var(--font-inter), Arial, sans-serif;
 }
-
-.tag-cut {
-  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
-}
-
-.panel-cut {
-  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-}
-
-.btn-cut {
-  clip-path: polygon(6% 0, 100% 0, 94% 100%, 0% 100%);
-}
