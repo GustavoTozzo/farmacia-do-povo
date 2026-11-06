@@ -3,13 +3,14 @@ import Image from "next/image";
 export function BrandPanel() {
   return (
     <div className="relative mx-auto w-full max-w-md">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-[4px] border border-border bg-muted">
+      <div className="overflow-hidden rounded-[4px] border border-border bg-muted">
         <Image
-          src="/images/farmaceutica-hero.jpg"
-          alt="Atendimento farmacêutico na Farmácia do Povo"
-          fill
+          src="/images/fachada-farmacia.jpg"
+          alt="Fachada da Farmácia do Povo em Nova Esperança, PR"
+          width={1244}
+          height={670}
           sizes="(min-width: 1024px) 420px, 90vw"
-          className="object-cover object-[50%_15%]"
+          className="h-auto w-full"
           priority
         />
       </div>
