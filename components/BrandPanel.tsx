@@ -7,8 +7,8 @@ export function BrandPanel() {
         <Image
           src="/images/fachada-farmacia.jpg"
           alt="Fachada da Farmácia do Povo em Nova Esperança, PR"
-          width={1244}
-          height={670}
+          width={1088}
+          height={748}
           sizes="(min-width: 1024px) 420px, 90vw"
           className="h-auto w-full"
           priority
