@@ -2,7 +2,7 @@ export const site = {
   nome: "Farmácia do Povo",
   slogan: "Desde 2002 cuidando da saúde da nossa gente",
   descricaoCurta:
-    "Farmácia de bairro em Nova Esperança (PR), com atendimento próximo, produtos de confiança e preço justo.",
+    "Farmácia central em Nova Esperança (PR), com atendimento próximo, produtos de confiança e preço justo.",
   desde: 2002,
   telefone: "(44) 3252-5166",
   telefoneHref: "tel:+554432525166",

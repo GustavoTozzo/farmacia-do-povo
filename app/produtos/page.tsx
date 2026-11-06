@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CatalogoClient } from "@/app/produtos/CatalogoClient";
 
 export const metadata: Metadata = {
@@ -19,11 +20,15 @@ export default function ProdutosPage() {
           Catálogo
         </p>
         <h1 className="font-display mt-2 text-3xl font-bold text-ink sm:text-4xl">
-          Produtos genéricos e de linha
+          Produtos de linha
         </h1>
         <p className="mt-3 text-ink-soft">
-          Medicamentos genéricos, higiene, beleza, mãe e bebê, suplementos e
-          muito mais — com o mesmo atendimento de sempre.
+          Higiene, beleza, mãe e bebê, suplementos e muito mais — com o mesmo
+          atendimento de sempre. Procurando fórmulas manipuladas?{" "}
+          <Link href="/manipulacao" className="font-semibold text-primary hover:text-primary-dark">
+            Conheça nossa seção de manipulação
+          </Link>
+          .
         </p>
       </div>
 

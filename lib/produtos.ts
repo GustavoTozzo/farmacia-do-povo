@@ -1,5 +1,4 @@
 export type Categoria =
-  | "medicamentos"
   | "higiene-beleza"
   | "mae-bebe"
   | "suplementos"
@@ -7,7 +6,6 @@ export type Categoria =
   | "primeiros-socorros";
 
 export const categorias: { id: Categoria; nome: string; icone: string }[] = [
-  { id: "medicamentos", nome: "Medicamentos genéricos", icone: "pill" },
   { id: "higiene-beleza", nome: "Higiene e beleza", icone: "sparkles" },
   { id: "mae-bebe", nome: "Mãe e bebê", icone: "baby" },
   { id: "suplementos", nome: "Suplementos e vitaminas", icone: "flask-conical" },
@@ -26,46 +24,6 @@ export type Produto = {
 };
 
 export const produtos: Produto[] = [
-  {
-    id: "dipirona-500",
-    nome: "Dipirona Monoidratada 500mg",
-    categoria: "medicamentos",
-    variante: "Genérico · 10 comprimidos",
-    precoDe: 12.9,
-    preco: 8.49,
-    selo: "oferta",
-  },
-  {
-    id: "paracetamol-750",
-    nome: "Paracetamol 750mg",
-    categoria: "medicamentos",
-    variante: "Genérico · 20 comprimidos",
-    preco: 11.9,
-    selo: "mais-vendido",
-  },
-  {
-    id: "ibuprofeno-400",
-    nome: "Ibuprofeno 400mg",
-    categoria: "medicamentos",
-    variante: "Genérico · 20 comprimidos",
-    preco: 14.5,
-  },
-  {
-    id: "omeprazol-20",
-    nome: "Omeprazol 20mg",
-    categoria: "medicamentos",
-    variante: "Genérico · 28 cápsulas",
-    precoDe: 24.9,
-    preco: 18.9,
-    selo: "oferta",
-  },
-  {
-    id: "loratadina-10",
-    nome: "Loratadina 10mg",
-    categoria: "medicamentos",
-    variante: "Genérico · 12 comprimidos",
-    preco: 9.9,
-  },
   {
     id: "soro-fisiologico",
     nome: "Soro Fisiológico 0,9%",

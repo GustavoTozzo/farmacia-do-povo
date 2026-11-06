@@ -4,13 +4,11 @@ import {
   Droplets,
   FlaskConical,
   LucideIcon,
-  Pill,
   Sparkles,
 } from "lucide-react";
 import type { Categoria } from "@/lib/produtos";
 
 const iconMap: Record<Categoria, LucideIcon> = {
-  medicamentos: Pill,
   "higiene-beleza": Sparkles,
   "mae-bebe": Baby,
   suplementos: FlaskConical,

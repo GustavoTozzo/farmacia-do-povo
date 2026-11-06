@@ -2,7 +2,8 @@ import Link from "next/link";
 import {
   Activity,
   Clock,
-  HeartHandshake,
+  Droplet,
+  FlaskConical,
   MapPin,
   Navigation,
   Percent,
@@ -27,13 +28,18 @@ const atendimentos = [
   },
   {
     icone: Activity,
-    titulo: "Aferição de pressão e glicemia",
+    titulo: "Aferição de pressão",
     texto: "Medição rápida e gratuita, sem necessidade de agendamento.",
+  },
+  {
+    icone: Droplet,
+    titulo: "Teste de glicemia",
+    texto: "Medição rápida mediante taxa simbólica, sem necessidade de agendamento.",
   },
   {
     icone: Syringe,
     titulo: "Aplicação de injetáveis",
-    texto: "Aplicação com hora marcada ou por ordem de chegada.",
+    texto: "Mediante apresentação de receita médica, com hora marcada ou por ordem de chegada.",
   },
   {
     icone: Truck,
@@ -44,11 +50,6 @@ const atendimentos = [
     icone: Percent,
     titulo: "Descontos e promoções",
     texto: "Ofertas semanais em genéricos e produtos de linha.",
-  },
-  {
-    icone: HeartHandshake,
-    titulo: "Manipulação sob encomenda",
-    texto: "Fórmulas manipuladas também disponíveis, sob consulta.",
   },
 ];
 
@@ -116,7 +117,7 @@ export default function Home() {
               Sobre a farmácia
             </p>
             <h2 className="font-display mt-2 text-3xl font-bold text-ink">
-              Uma farmácia de bairro, feita por gente que conhece seu nome
+              Uma farmácia central, feita por gente que conhece seu nome
             </h2>
             <p className="mt-4 text-ink-soft">
               A Farmácia do Povo nasceu em {site.desde} em Nova Esperança, no
@@ -197,6 +198,28 @@ export default function Home() {
           {destaques.map((produto) => (
             <ProdutoCard key={produto.id} produto={produto} />
           ))}
+        </div>
+      </section>
+
+      {/* Manipulação */}
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="flex flex-col items-start gap-5 border border-border bg-muted p-7 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-4">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[4px] bg-primary-light text-primary">
+              <FlaskConical className="h-5 w-5" strokeWidth={1.75} />
+            </div>
+            <div>
+              <h2 className="font-display text-xl font-bold text-ink">
+                Precisa de uma fórmula manipulada?
+              </h2>
+              <p className="mt-1 text-sm text-ink-soft">
+                Envie sua receita pelo WhatsApp e receba um orçamento sem compromisso.
+              </p>
+            </div>
+          </div>
+          <Button href="/manipulacao" className="shrink-0">
+            Conhecer manipulação
+          </Button>
         </div>
       </section>
 
