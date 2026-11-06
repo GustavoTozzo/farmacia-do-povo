@@ -5,6 +5,7 @@ import {
   Droplet,
   FlaskConical,
   MapPin,
+  MessageCircle,
   Navigation,
   Percent,
   Phone,
@@ -16,9 +17,9 @@ import {
 } from "lucide-react";
 import { BrandPanel } from "@/components/BrandPanel";
 import { Button } from "@/components/Button";
-import { ProdutoCard } from "@/components/ProdutoCard";
+import { PostCard } from "@/components/PostCard";
+import { posts } from "@/lib/posts";
 import { site } from "@/lib/site";
-import { produtos } from "@/lib/produtos";
 
 const atendimentos = [
   {
@@ -59,7 +60,7 @@ const stats = [
   { numero: "100%", legenda: "atendimento humano, sem robôs" },
 ];
 
-const destaques = produtos.slice(0, 8);
+const postsRecentes = posts.slice(0, 2);
 
 export default function Home() {
   return (
@@ -80,7 +81,10 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/produtos">Ver catálogo de produtos</Button>
+              <Button href={site.whatsapp} external>
+                <MessageCircle className="h-4 w-4" />
+                Fale no WhatsApp
+              </Button>
               <Button href={site.endereco.mapsHref} variant="outline" external>
                 <Navigation className="h-4 w-4" />
                 Como chegar
@@ -175,28 +179,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Catálogo preview */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      {/* Blog preview */}
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-              Catálogo
+              Blog
             </p>
             <h2 className="font-display mt-2 text-3xl font-bold text-ink">
-              Alguns dos nossos produtos
+              Saúde e cuidados do dia a dia
             </h2>
           </div>
           <Link
-            href="/produtos"
+            href="/blog"
             className="text-sm font-semibold text-primary hover:text-primary-dark"
           >
-            Ver catálogo completo →
+            Ver todos os posts →
           </Link>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {destaques.map((produto) => (
-            <ProdutoCard key={produto.id} produto={produto} />
+        <div className="mt-4">
+          {postsRecentes.map((post) => (
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
       </section>
